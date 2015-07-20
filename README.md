@@ -2,7 +2,7 @@
 
 Tab navigation for Skeleton. [Demo](http://nathancahill.github.io/skeleton-tabs/)
 
-![](http://i.imgur.com/ekJwhya.png)
+![](http://i.imgur.com/q7FZrfL.png)
 
 ### Usage
 
