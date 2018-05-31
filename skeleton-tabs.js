@@ -1,14 +1,22 @@
 
-$(function() {
-    $('ul.tab-nav li a.button').click(function() {
-        var href = $(this).attr('href');
+(function() {
+    function main() {
+        var tabButtons = [].slice.call(document.querySelectorAll('ul.tab-nav li a.button'));
 
-        $('li a.active.button', $(this).parent().parent()).removeClass('active');
-        $(this).addClass('active');
+        tabButtons.map(function(button) {
+            button.addEventListener('click', function() {
+                document.querySelector('li a.active.button').classList.remove('active');
+                button.classList.add('active');
 
-        $('.tab-pane.active', $(href).parent()).removeClass('active');
-        $(href).addClass('active');
+                document.querySelector('.tab-pane.active').classList.remove('active');
+                document.querySelector(button.getAttribute('href')).classList.add('active');
+            })
+        })
+    }
 
-        return false;
-    });
-});
+    if (document.readyState !== 'loading') {
+        main();
+    } else {
+        document.addEventListener('DOMContentLoaded', main);
+    }
+})();
