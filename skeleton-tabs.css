@@ -17,7 +17,7 @@ ul.tab-nav li a.button {
 }
 
 ul.tab-nav li a.active.button {
-    border-bottom: 1px solid #fff;
+    border-bottom: 0.175em solid #fff;
 }
 
 .tab-content .tab-pane {
